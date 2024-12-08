@@ -17,6 +17,7 @@
 | 平台+设备名称 | 固件编译状态 | 配置文件 | 固件下载 |
 | :-------------: | :-------------: | :-------------: | :-------------: |
 | [![](https://img.shields.io/badge/IPQ60XX-NOWIFI-32C955.svg?logo=openwrt)](https://github.com/badcrazy/zn-m2_op6.6/blob/main/.github/workflows/IPQ60XX-NOWIFI.yml) | [![](https://github.com/badcrazy/zn-m2_op6.6/actions/workflows/IPQ60XX-NOWIFI.yml/badge.svg)](https://github.com/badcrazy/zn-m2_op6.6/actions/workflows/IPQ60XX-WIFI.yml) | [![](https://img.shields.io/badge/编译-配置-orange.svg?logo=apache-spark)](https://github.com/badcrazy/zn-m2_op6.6/blob/main/configs/ipq60xx.config) | [![](https://img.shields.io/badge/下载-链接-blueviolet.svg?logo=hack-the-box)](https://github.com/badcrazy/zn-m2_op6.6/releases/IPQ60XX-NOWIFI) |
+| [![](https://img.shields.io/badge/IPQ60XX-24.10(NOWIFI)-32C955.svg?logo=openwrt)](https://github.com/badcrazy/zn-m2_op6.6/blob/main/.github/workflows/IPQ60XX-24.10(NOWIFI).yml) | [![](https://github.com/badcrazy/zn-m2_op6.6/actions/workflows/IPQ60XX-24.10(NOWIFI).yml/badge.svg)](https://github.com/badcrazy/zn-m2_op6.6/actions/workflows/IPQ60XX-WIFI.yml) | [![](https://img.shields.io/badge/编译-配置-orange.svg?logo=apache-spark)](https://github.com/badcrazy/zn-m2_op6.6/blob/main/configs/ipq60xx-nowifi.config) | [![](https://img.shields.io/badge/下载-链接-blueviolet.svg?logo=hack-the-box)](https://github.com/badcrazy/zn-m2_op6.6/releases/IPQ60XX-24.10(NOWIFI)) |
 
 
 ## 定制固件 [![](https://img.shields.io/badge/-项目基本编译教程-FFFFFF.svg)](#定制固件-)
