@@ -9,6 +9,18 @@
 # TTYD 免登录
 # sed -i 's|/bin/login|/bin/login -f root|g' feeds/packages/utils/ttyd/files/ttyd.config
 
+# 优化网络性能
+sed -i '$a  # 256 Kb / 64 MB'  feeds/package/base-files/files/etc/sysctl.d/10-default.conf
+sed -i '$a  net.core.rmem_default = 262144'  feeds/package/base-files/files/etc/sysctl.d/10-default.conf
+sed -i '$a  net.core.wmem_default = 262144'  feeds/package/base-files/files/etc/sysctl.d/10-default.conf
+sed -i '$a  net.core.rmem_max = 67108864'  feeds/package/base-files/files/etc/sysctl.d/10-default.conf
+sed -i '$a  net.core.wmem_max = 67108864'  feeds/package/base-files/files/etc/sysctl.d/10-default.conf
+sed -i '$a  # 64MB'  feeds/package/base-files/files/etc/sysctl.d/10-default.conf
+sed -i '$a  net.ipv4.tcp_rmem = 4096 87380 67108864'  feeds/package/base-files/files/etc/sysctl.d/10-default.conf
+sed -i '$a  net.ipv4.tcp_wmem = 4096 16384 67108864'  feeds/package/base-files/files/etc/sysctl.d/10-default.conf
+sed -i '$a  net.ipv4.tcp_window_scaling = 1 '  feeds/package/base-files/files/etc/sysctl.d/10-default.conf
+
+
 # 移除要替换的包
 rm -rf feeds/luci/applications/luci-app-upnp
 # Git稀疏克隆，只克隆指定目录到本地
