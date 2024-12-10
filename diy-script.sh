@@ -19,6 +19,9 @@ sed -i '$a  # 64MB'  feeds/package/base-files/files/etc/sysctl.d/10-default.conf
 sed -i '$a  net.ipv4.tcp_rmem = 4096 87380 67108864'  feeds/package/base-files/files/etc/sysctl.d/10-default.conf
 sed -i '$a  net.ipv4.tcp_wmem = 4096 16384 67108864'  feeds/package/base-files/files/etc/sysctl.d/10-default.conf
 sed -i '$a  net.ipv4.tcp_window_scaling = 1 '  feeds/package/base-files/files/etc/sysctl.d/10-default.conf
+sed -i 's/net.netfilter.nf_conntrack_tcp_timeout_established=7440/net.netfilter.nf_conntrack_tcp_timeout_established=300/g' feeds/package/kernel/linux/files/sysctl-nf-conntrack.conf
+sed -i 's/net.netfilter.nf_conntrack_udp_timeout=60/net.netfilter.nf_conntrack_udp_timeout=10/g' feeds/package/kernel/linux/files/sysctl-nf-conntrack.conf
+sed -i 's/net.netfilter.nf_conntrack_udp_timeout_stream=180/net.netfilter.nf_conntrack_udp_timeout_stream=20/g' feeds/package/kernel/linux/files/sysctl-nf-conntrack.conf
 
 
 # 移除要替换的包
