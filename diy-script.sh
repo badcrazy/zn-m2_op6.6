@@ -26,16 +26,6 @@ sed -i 's/net.netfilter.nf_conntrack_udp_timeout_stream=180/net.netfilter.nf_con
 
 # 移除要替换的包
 rm -rf feeds/luci/applications/luci-app-upnp
-# Git稀疏克隆，只克隆指定目录到本地
-function git_sparse_clone() {
-  branch="$1" repourl="$2" && shift 2
-  git clone --depth=1 -b $branch --single-branch --filter=blob:none --sparse $repourl
-  repodir=$(echo $repourl | awk -F '/' '{print $(NF)}')
-  cd $repodir && git sparse-checkout set $@
-  mv -f $@ ../package
-  cd .. && rm -rf $repodir
-}
-
 # 添加额外插件
 git clone --depth=1 https://github.com/badcrazy/luci-app-upnp package/luci-app-upnp
 git clone --depth=1 https://github.com/xiaoxiao29/luci-app-adguardhome package/luci-app-adguardhome
